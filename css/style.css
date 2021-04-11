@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+   body {
+        background-color: rgb(63, 63, 63);
+        color: white;
+        font-family: 'Roboto Mono', monospace;
+    }
+
+    #dashboard {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        grid-template-areas: "header    header"
+                             "graph1    graph1"
+                             "graph2    graph3"
+                             "graph4    graph4";
+        
+
+        
+
+    }
+    .temp{
+      font-size: 20px;
+    }
+    .item{
+        border: 1px solid rgba(0, 0, 0, 0.205);
+        border-radius: 20px;
+        padding: 5px;
+        height: 50px;
+        background-color: rgb(44, 42, 42);
+    }
+    .header{
+        background-color: rgb(44, 42, 42);
+        grid-area: header;
+    }
+   
+      
+      
+    
+      
+
+    .graph1{
+        grid-area: graph1;
+        height: 125px;
+    }
+    .graph2{
+        grid-area: graph2;
+        height: 200px;
+    }
+    .graph3{
+        grid-area: graph3;
+        height: 200px;
+    }
+    .graph4{
+        grid-area: graph4;
+        text-align: center;
+        margin-bottom: 20px;
+        height: 175px;
+        margin-bottom: 0px;
+        }
+        .ct-label{
+          color: white;
+        }
+        
+        .ct-series-a .ct-slice-pie {
+          /* fill of the pie slieces */
+          fill: hsl(212, 70%, 67%);
+          
+          
+          /* give your pie slices some outline or separate them visually by using the background color here */
+          
+          /* outline width */
+          stroke-width: 4px;
+
+          
+        }
+        .ct-series-c .ct-slice-pie {
+          /* fill of the pie slieces */
+          fill: hsl(212, 35%, 79%);
+          
+          /* give your pie slices some outline or separate them visually by using the background color here */
+          
+          /* outline width */
+          stroke-width: 4px;
+
+          
+        }
+        .ct-series-b .ct-slice-pie {
+          /* fill of the pie slieces */
+          fill: hsl(212, 40%, 59%);
+          
+          /* give your pie slices some outline or separate them visually by using the background color here */
+          
+          /* outline width */
+          stroke-width: 4px;
+
+          
+        }
+        .ct-series-c .ct-slice-pie {
+          /* fill of the pie slieces */
+          fill: hsl(212, 35%, 79%);
+          
+          /* give your pie slices some outline or separate them visually by using the background color here */
+          
+          /* outline width */
+          stroke-width: 4px;
+
+          
+        }
+        .ct-series-d .ct-slice-pie {
+          /* fill of the pie slieces */
+          fill: hsl(212, 67%, 71%);
+          
+          /* give your pie slices some outline or separate them visually by using the background color here */
+          
+          /* outline width */
+          stroke-width: 4px;
+
+          
+        }
+        
+        #grafiek2 {
+          width: 600px;
+          height: 200px;
+          
+        }
+        #grafiek3{
+          width: 300px;
+          margin-top: 40px;
+          margin-left: 30px;
+        }
+        #txt {
+          margin-left: 20px;
+        }
+        #grafiek{
+          width: 300px;
+          margin-top: 30px;
+          margin-left: 10px;
+
+        }
+        .h3g2 {
+          padding-left: 10px;
+        }
+        .h2g3 {
+          padding-left: 30px;
+          
+
+        }
+        .legenda {
+          padding-left: 50px;
+        }
+        .h6g3 {
+          padding-left: 125px;
+        }
+        body {
+          background-color: #292424;
+          
+          
+        }
+  
+        
+       .image{
+         position: relative;
+         width: 100px;
+         margin-left: 40px;
+
+       }
+       .logo {
+        width: 150px;
+        margin-left: 620px;
+        
+       }
+       .lamp{
+         width: 100px;
+       }
+       .wifi{
+         width: 100px;}
+
+
+
+#standen{
+  font-size: 8px;
+  margin-left: 20%;
+  margin-top: 2px;
+
+}
+    @media screen and (min-width: 900px) {
+      #dashboard{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        grid-template-areas: "header    header   header   header" 
+                             "graph1    graph1   graph4   graph4"
+                             "graph2    graph3   graph4   graph4";
+                             
+                            }
+
+                            .header{
+                                background-color: rgb(44, 42, 42);
+                                grid-area: header;
+                                height: 100px;
+                                margin-right: 30px;
+                                margin-left: 30px;
+                            }
+                        
+                            .graph1{
+                                grid-area: graph1;
+                                height: 264px;
+                                margin-top: 30px ;
+                                margin-left: 30px;
+                            }
+                           .graph2{
+                                grid-area: graph2;
+                                height: 300px;
+                                margin-left: 30px;
+                            }
+                            .graph3{
+                                grid-area: graph3;
+                                height: 300px;
+                            
+                            }
+                            .graph4{
+                                grid-area: graph4;
+                                height: 600px;
+                                margin-top: 30px;
+                                margin-right: 30px;
+                                }
+                                #standen{
+                                  font-size: 12px;
+                                  margin-left: 3px;
+                                  
+                           
+        
+    }
+    }
+    @media screen and (min-width: 1100px) {
+      #dashboard{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        grid-template-areas: "header    header   header   header" 
+                             "graph1    graph1   graph4   graph4"
+                             "graph2    graph3   graph4   graph4";
+                             
+                            }
+
+                            .header{
+                                background-color: rgb(44, 42, 42);
+                                grid-area: header;
+                                height: 100px;
+                                margin-right: 30px;
+                                margin-left: 30px;
+                            }
+                        
+                            .graph1{
+                                grid-area: graph1;
+                                height: 264px;
+                                margin-top: 30px ;
+                                margin-left: 30px;
+                            }
+                           .graph2{
+                                grid-area: graph2;
+                                height: 300px;
+                                margin-left: 30px;
+                            }
+                            .graph3{
+                                grid-area: graph3;
+                                height: 300px;
+                            
+                            }
+                            .graph4{
+                                grid-area: graph4;
+                                height: 600px;
+                                margin-top: 30px;
+                                margin-right: 30px;
+                                }
+                                #standen{
+                                  font-size: 15px;
+                                  margin-left: 10px;
+                                  margin-left: 10px;
+                           
+        
+    }
+  }
+   
