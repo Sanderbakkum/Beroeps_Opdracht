@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeroepsOpdracht
+    <title>Duurzaam Huis
     </title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="http://example.com/favicon.png">
+  
     <form action="php/standen.php" method="POST"></form>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
@@ -15,6 +15,7 @@
     <script src="scripts/grafiek.js"></script>
     <script src="scripts/grafiek2.js"></script>
     <script src="scripts/grafiek3.js"></script>
+    <script src="scripts/grafiek4.js"></script>
 
     
     
@@ -22,12 +23,17 @@
     
     
 </head>
+
 <body>
     <div id="dashboard">
 
         <div class="item header">
           
-          <img rel="Logo" class="logo" src="img/Green.png">
+          <img rel="Logo" class="logo" src="img/Green1.png">
+
+          <img rel="Logo2" class="logo2" src="img/Green2.png">
+
+          <img rel="Logo3" class="logo3" src="img/Green1.png">
           
           
       
@@ -37,7 +43,8 @@
         </div>
         <div class="item graph1"> 
           <p id="grafiek2"></p>  
-          <p id="txt">Gas gebruik dit jaar</p>   
+          <p id="txt">Gas gebruik vorig jaar</p>   
+          
         </div>
 
 
@@ -50,6 +57,17 @@
         <div class="item graph2">
           <h3 class="h3g2">Meeste water gebruik vandaag</h3>
           <p id="grafiek3"></p>
+          <div class="legenda2">
+                <span style="color:hsl(212, 70%, 67%)">⬤</span>
+                <span style="color:white">Sander</span>
+                <span style="color: hsl(212, 40%, 59%);">⬤</span>
+                <span style="color:white">Ryan</span>
+                <span style="color: hsl(212, 35%, 79%)">⬤</span>
+                <span style="color:white">Henk</span>
+                <span style="color: hsl(212, 35%, 79%)">⬤</span>
+                <span style="color:white">Jan</span></div>
+          
+          
         </div>
         
 
@@ -63,7 +81,7 @@
 
             <div id="grafiek"></div>
             <div class="legenda">
-                <span style="color:hsl(212, 35%, 79%)">⬤</span>
+                <span style="color:hsl(212, 70%, 67%)">⬤</span>
                 <span style="color:white">Gas</span>
                 <span style="color: hsl(212, 40%, 59%);">⬤</span>
                 <span style="color:white">Water</span>
@@ -77,8 +95,42 @@
         </div>
         <div class="item graph4"> 
         
-          
-          
+          <div class="clock">
+            <div class="hour">
+                <div class="hr" id="hr"></div>
+                </div>
+            <div class="min">
+                <div class="mn" id="mn"></div>
+                </div>
+            <div class="sec">
+                <div class="sc" id="sc"></div>
+                </div>
+        </div>
+        <script type="text/javascript">
+            const deg = 6;
+            const hr = document.querySelector('#hr');
+            const mn = document.querySelector('#mn');
+            const sc = document.querySelector('#sc');
+            
+    
+            setInterval(() => {
+                let day = new Date();
+                let hh = day.getHours() * 30;
+                let mm = day.getMinutes() * deg;
+                let ss = day.getSeconds() * deg;
+            
+                hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+                mn.style.transform = `rotateZ(${mm}deg)`;
+                sc.style.transform = `rotateZ(${ss}deg)`;
+            },1000)
+    
+            </script>
+            <h3 class="h3g4">Kosten Electra</h3>
+            <h4 class="h4g4">in kwartalen</h4>
+            <div id="grafiek4"></div>
+            
+
+            
             
         </div>
     
