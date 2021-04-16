@@ -1,9 +1,10 @@
 <?php
 
+
 // Zet de toegangsgegevens tot de database in variabelen
 $server     = 'localhost';
 $database   = 'Beroepsopdracht';
-$table      = 'standen';
+$table      = 'electra';
 $name       = 'root';
 $pwd        = 'root';
 
@@ -19,7 +20,7 @@ if (mysqli_connect_errno()) {
 }
 
 // ZET de query klaar in een variabele
-$sql = "SELECT id, datum, item, stand FROM standen";
+$sql = "SELECT id, item, stand FROM electra";
 
 // VOER de query uit met de gelegde verbinding en de query variabele
 $result = mysqli_query($connect, $sql);
@@ -39,3 +40,5 @@ mysqli_free_result($result);
 
 // SLUIT de verbinding met de database
 mysqli_close($connect);
+
+?>
